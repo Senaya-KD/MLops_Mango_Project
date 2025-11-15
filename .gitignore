@@ -1,8 +1,12 @@
-# Ignore large data and models
-data/
-models/
+# Ignore large model files but allow DVC pointer files
+models/*.h5
+!models/*.h5.dvc
 
-# DVC cache
+# Ignore dataset files but allow DVC pointer files
+data/*
+!data.dvc
+
+# Ignore DVC cache
 .dvc/cache/
 
 # Python / notebook junk
