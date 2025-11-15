@@ -1,8 +1,6 @@
 # Mango Leaf Disease Classification – MLOps Project  
 Higher National Diploma in Data Science (24.2f)  
 Machine Learning 02 – Course Work 2  
-Student: Group project
-
 ---
 
 ## 1. Problem Definition
@@ -81,5 +79,8 @@ Purpose of DVC:
 All code, DVC metadata, and configuration files were successfully pushed to GitHub.
 
 
-
+📊 Coursework Project — Mango Leaf Disease Classification – MLOps Project  
+Institute: National Institute of Business Management (NIBM), Sri Lanka
+Programme: Higher National Diploma in Data Science (HNDDS)
+Student: Senaya Amarasinghe , Salma Zain. , Angel Fernando.
 
