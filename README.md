@@ -80,7 +80,7 @@ All code, DVC metadata, and configuration files were successfully pushed to GitH
 
 
 📊 Coursework Project — Mango Leaf Disease Classification – MLOps Project  
-Institute: National Institute of Business Management (NIBM), Sri Lanka
-Programme: Higher National Diploma in Data Science (HNDDS)
-Student: Senaya Amarasinghe , Salma Zain. , Angel Fernando.
+### Institute: National Institute of Business Management (NIBM), Sri Lanka
+### Programme: Higher National Diploma in Data Science (HNDDS)
+### Student: Senaya Amarasinghe , Salma Zain. , Angel Fernando.
 
