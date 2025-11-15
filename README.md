@@ -1,65 +1,85 @@
-# 🌿 Mango Leaf Disease Classification – MLOps Project  
-**Higher National Diploma in Data Science (24.2f)**  
-**Machine Learning 02 – Course Work 2**  
-**Student: Senaya**
+# Mango Leaf Disease Classification – MLOps Project  
+Higher National Diploma in Data Science (24.2f)  
+Machine Learning 02 – Course Work 2  
+Student: Group project
 
 ---
 
-## 📌 Project Overview  
-This project implements a **Deep Learning model** and a complete **MLOps workflow** for Mango Leaf Disease Classification.  
-The work follows the CW2 guidelines:
+## 1. Problem Definition
 
-- Problem definition & dataset explanation  
-- Deep learning model development with **MLflow tracking**  
-- MLOps components: **Git + GitHub**, **DVC**, **CI/CD**, **Docker**, **FastAPI**, **Model Monitoring**  
-- Documentation & demonstration video  
+This project aims to classify mango leaf diseases using a deep learning model and apply MLOps concepts for proper version control and experiment reproducibility. The goal of the coursework is to build the model and set up versioning using Git and DVC.
 
----
+### Problem Statement
+To detect mango leaf diseases from images using a deep learning classification model.
 
-# 🧩 1. Problem Definition  
-### **Objective**  
-To detect and classify **mango leaf diseases** using a deep-learning image classifier and deploy it using MLOps practices.
+### Assumptions
+- Images in the dataset represent actual mango leaf diseases.
+- Dataset labels are correct.
+- The model is intended for educational and research purposes.
 
-### **Assumptions**
-- Images are correctly labelled.
-- The training data represents real-world leaf conditions.
-- The model will be used for decision support—not as a final medical diagnosis.
-
-### **Limitations**
+### Limitations
 - Dataset size is limited.
-- Images may vary in lighting/background conditions.
-- Some rare diseases may not be included.
+- Variations in lighting and background may affect model performance.
 
-### **Dataset Description**
-- A Mango Leaf Disease dataset (images) stored in the **`data/`** folder.
-- Tracked using **DVC** to avoid GitHub file-size issues.
-- Image classes include (example):  
-  - Healthy  
-  - Anthracnose  
-  - Bacterial Spot  
-  - Powdery Mildew  
-- Preprocessing: resizing, normalization, augmentation.
+### Dataset Description
+- Dataset contains mango leaf images of different classes (e.g., Healthy, Anthracnose, Bacterial Spot, Powdery Mildew).
+- Dataset is stored in the `data/` folder.
+- Dataset is large, so it is tracked using **DVC** instead of uploading directly to GitHub.
 
 ---
 
-# 🧩 2. Model Development (Using MLflow)
-The model development pipeline includes:
+## 2. Model Development (Completed)
 
-### ✔️ Data Preprocessing  
-- Resizing to 224×224  
-- Normalization (1/255)  
-- Augmentation (rotation, flip, zoom)
+Model development was done using Python and Jupyter Notebook.  
+The following steps were completed:
 
-### ✔️ Deep Learning Model  
-- Built using TensorFlow/Keras  
-- CNN architecture with Conv2D, MaxPooling, Dense, Dropout  
-- Metrics: accuracy, loss  
+### Data Preprocessing
+- Image resizing (224×224)
+- Normalization
+- Augmentation to improve model generalization
 
-### ✔️ MLflow Integration  
-- Experiment tracking  
-- Hyperparameter logging  
-- Metrics logging (train/validation accuracy)  
-- Model versioning
+### Model Architecture
+A CNN model was trained using TensorFlow/Keras with:
+- Convolution layers  
+- MaxPooling layers  
+- Fully connected layers  
 
-### ✔️ Model Saving  
-Final model saved as:  
+### Model Saving
+The final model was saved as:models/mango_leaf_model_run2_v2.h5
+This `.h5` model file is tracked using **DVC**.
+### Notebook
+The full model development is available in the notebook:
+
+---
+
+## 3. Version Control (Git + GitHub + DVC)
+
+Version control has been fully set up.
+
+### Git & GitHub
+- The complete project structure and source code are stored in a GitHub repository.
+- All commits track code changes and project structure.
+
+### DVC (Data Version Control)
+DVC is used to track:
+- The large dataset (`data/`)
+- The trained model file (`models/mango_leaf_model_run2_v2.h5`)
+
+Commands completed:
+dvc init
+dvc add data
+dvc add models/mango_leaf_model_run2_v2.h5
+git add data.dvc models/mango_leaf_model_run2_v2.h5.dvc
+git commit -m "Track dataset and model with DVC"
+
+Purpose of DVC:
+- Avoid GitHub file size limits  
+- Enable reproducible dataset/model versions  
+- Keep Git repository lightweight
+
+### Git Push Completed
+All code, DVC metadata, and configuration files were successfully pushed to GitHub.
+
+
+
+
