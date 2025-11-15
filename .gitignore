@@ -1,0 +1,11 @@
+# Ignore large data and models
+data/
+models/
+
+# DVC cache
+.dvc/cache/
+
+# Python / notebook junk
+__pycache__/
+.ipynb_checkpoints/
+.env
